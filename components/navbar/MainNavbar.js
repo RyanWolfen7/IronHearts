@@ -29,15 +29,6 @@ const MainNavbar = ({
                                     />
                                 </div>
                             </Box>
-                            {/* <Typography
-                                variant="h2"
-                                noWrap
-                                color="inherit"
-                                onClick={() => Route.push('/')}
-                                sx={{ ":hover": { cursor: "pointer" }}}
-                            >
-                                <FormattedMessage id="title"/>
-                            </Typography> */}
                         </Grid>
                         <Grid item>
                             <Button color="inherit" size="large" onClick={() => Route.push('/about')}> <FormattedMessage id="about"/> </Button>

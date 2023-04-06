@@ -29,7 +29,7 @@ const MyApp = ({ Component, emotionCache = clientSideEmotionCache, pageProps }) 
         <ThemeProvider theme={mainTheme}>
           <CssBaseline />
           <MainNavbar />
-            <SpaceBackground/>
+            <SpaceBackground  style={{ zIndex: -1 }} />
             <Component {...pageProps} />
         </ThemeProvider>
       </IntlProvider>
