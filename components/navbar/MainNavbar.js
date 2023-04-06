@@ -34,6 +34,7 @@ const MainNavbar = ({
                             <Button color="inherit" size="large" onClick={() => Route.push('/about')}> <FormattedMessage id="about"/> </Button>
                             <Button color="inherit" size="large" onClick={() => Route.push('/store')}> <FormattedMessage id="store"/> </Button>
                             <Button color="inherit" size="large" onClick={() => Route.push('/news')}> <FormattedMessage id="news"/> </Button>
+                            <Button color="inherit" size="large" onClick={() => Route.push('/login')}> <FormattedMessage id="support"/> </Button>
                             <Button color="inherit" size="large" onClick={() => Route.push('/login')}> <FormattedMessage id="login"/> </Button>
                         </Grid>
                     </Grid>                    
