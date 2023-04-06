@@ -1,13 +1,15 @@
-import { AppBar, Button, Container, Grid, Toolbar, Typography } from "@mui/material"
+import { AppBar, Button, Container, Grid, Toolbar, Typography, Box } from "@mui/material"
 import { useRouter } from "next/router"
 import { FormattedMessage } from "react-intl"
+import Image from 'next/image'
+import Logo from '../../public/logo2.png'
 
 const MainNavbar = ({
 
 }) => {
     const Route = useRouter()
     return (
-        <AppBar position="static">
+        <AppBar position="sticky">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Grid 
@@ -16,7 +18,18 @@ const MainNavbar = ({
                         justifyContent="space-between"
                     >
                         <Grid item>
-                            <Typography
+                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                                <div style={{ position: 'relative', width: '25vw', height: '7rem', margin: 5 }}>
+                                    <Image 
+                                        src={Logo}
+                                        alt="Iron Hearts"
+                                        layout="fill"
+                                        object-fit="contain"
+                                        objectPosition="center"
+                                    />
+                                </div>
+                            </Box>
+                            {/* <Typography
                                 variant="h2"
                                 noWrap
                                 color="inherit"
@@ -24,7 +37,7 @@ const MainNavbar = ({
                                 sx={{ ":hover": { cursor: "pointer" }}}
                             >
                                 <FormattedMessage id="title"/>
-                            </Typography>
+                            </Typography> */}
                         </Grid>
                         <Grid item>
                             <Button color="inherit" size="large" onClick={() => Route.push('/about')}> <FormattedMessage id="about"/> </Button>

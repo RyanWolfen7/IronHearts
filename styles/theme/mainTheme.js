@@ -1,4 +1,4 @@
-import { createTheme, responsiveFontSizes } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles';
 import typography from './typography';
 
 const mainTheme = createTheme({
@@ -7,23 +7,13 @@ const mainTheme = createTheme({
     danger:'#660000'
   },
   palette: {
-    mode: 'light',
     primary: {
-      main: '#70798C',
+      main: '#000',
     },
-    secondary: {
-      main: '#F5F1ED',
-    },
-    accentPrimary: {
-      main: '#DAD2BC',
-    },
-    accentSecondary: {
-      main: '#A99985',
-    },
-    shadow: {
-      main: '#252323',
+    text: {
+      primary: '#ffffff',
     },
   },
 });
 
-export default responsiveFontSizes(mainTheme);
+export default mainTheme;

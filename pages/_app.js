@@ -8,6 +8,7 @@ import { useRouter } from 'next/router';
 import { IntlProvider } from 'react-intl';
 import English from '../locales/en.json';
 import Spanish from '../locales/es.json';
+import SpaceBackground from '@/components/SpaceBG';
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -28,7 +29,8 @@ const MyApp = ({ Component, emotionCache = clientSideEmotionCache, pageProps }) 
         <ThemeProvider theme={mainTheme}>
           <CssBaseline />
           <MainNavbar />
-          <Component {...pageProps} />
+            <SpaceBackground/>
+            <Component {...pageProps} />
         </ThemeProvider>
       </IntlProvider>
     </CacheProvider>
