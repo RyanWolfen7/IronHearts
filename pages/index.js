@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Card, CardContent, Typography, Grid } from '@mui/material'
+import { useMediaQuery, Typography, Grid } from '@mui/material'
 import Head from 'next/head'
 import Image from 'next/image'
 import Mech from '../public/gruntz_mech.jpg'
@@ -8,7 +8,8 @@ import { FormattedMessage } from 'react-intl'
 
 
 export default function Home() {
-
+  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.down("xl"));
+  const headerSize = isLargeScreen ? "h7" : "h6"
   return (
     <>
       <Head>
@@ -19,7 +20,7 @@ export default function Home() {
       </Head>
       <main>
         <Grid container>
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6}>
             <div style={{ position: 'relative', width: '100%', height: 0, paddingBottom: '100%' }}>
               <Image 
                 src={Cover}
@@ -30,16 +31,16 @@ export default function Home() {
               />
             </div>
           </Grid>
-          <Grid item xs={6} container justifyContent="center" alignItems="center" sx={{ zIndex: 1, p: 5 }}>
-            <Typography variant="h6" align="center">
+          <Grid item  xs={12} md={6} container justifyContent="center" alignItems="center" sx={{ zIndex: 1, p: 5 }}>
+            <Typography variant={headerSize} align="center">
                 <p><FormattedMessage id="landingPitch1"/></p><br/>
                 <p><FormattedMessage id="landingPitch2"/></p><br/>
                 {/* <p>Gama 3 was a penal colony for conscripted Mars rebels that mined essential raw minerals. After 20 years, the conscripts were freed, but the colony's productivity declined due to strong solar winds. The Earth Federation responded by limiting food shipments, increasing tensions. With many former rebels among them, the colony renamed itself to Liberty, declared independence and stopped all shipments. Now, the Federation is sending battleships to reclaim their assets, and Liberty is preparing to defend themselves.</p><br/> */}
                 <p><FormattedMessage id="landingPitch3"/></p><br/>
             </Typography>
           </Grid> 
-          <Grid item xs={6} container justifyContent="center" alignItems="center" sx={{ zIndex: 1, p: 5 }}>
-            <Typography variant="h6" align="center">
+          <Grid item xs={12} md={6} container justifyContent="center" alignItems="center" sx={{ zIndex: 1, p: 5 }}>
+            <Typography variant={headerSize} align="center">
               <ul>
               <FormattedMessage id="mavQuote"/> <br/><span> - General Mavernic LMCF </span>
               </ul>
@@ -54,7 +55,7 @@ export default function Home() {
               </ul>
             </Typography>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6}>
             <div style={{ position: 'relative', width: '100%', height: 0, paddingBottom: '100%' }}>
                 <Image 
                   src={Mech}
