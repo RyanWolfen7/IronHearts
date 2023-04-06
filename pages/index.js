@@ -30,6 +30,15 @@ export default function Home() {
           </Grid>
           <Grid item xs={6} container justifyContent="center" alignItems="center" sx={{ zIndex: 1, p: 5 }}>
             <Typography variant="h5" align="center">
+                <p>Iron Hearsts is a mix of Mash, Mobile Suit Gundam, and Game of Thrones with themes of the American Revolution.</p><br/>
+                <p>It is a tale of humanity in all of its glory, compassion, and horror. Told from the perspective of both sides of the conflict, the lines between wright and wrong, truth and lies, and the very notion of "Enemy" become blurred.</p><br/>
+                <p>It has been over 300 years since Earth Globalized and began its venture into space. However the further Huanity expanded the less cohesive our unity bacame. In an attempt to keep order the Earth Federation maintained a monopoly on food and in response the colonies it established outside the earth sphere would provide raw reasourses long gone from our homeworld.</p><br/>
+                <p>One such colony is Gama 3, self proclaimed as Liberty Mining Colony, was a penal colony established by pulling an astroid out of orbit. It was Earths largest supplier of raw and rare minerals until strong solar winds dampened collection. After countless missed quotas the Earth Federation began limiting thier shipments of food to Liberty. As many colonists where origionally conscripts from a failed Mars rebellion, Liberty declared independance and ceased all shipments to Earth.</p><br/>
+                <p>One year has passed since Liberty Mining Colony went on strike. The Federation have sent 3 state of the art battle ships to reclaim thier assets. In preperation the the Liberty Colonists begin improvising arms and armaments to fortifying thier home to impeding invasion.</p>
+            </Typography>
+          </Grid> 
+          <Grid item xs={6} container justifyContent="center" alignItems="center" sx={{ zIndex: 1, p: 5 }}>
+            <Typography variant="h5" align="center">
               <ul>
                 "The fight between us and the Earth Federation is not just about resources, but about our right to live free and with dignity. We will not let them control us and oppress our people. This is a battle for our independence and the future of our colony. We will stand firm and fight for our cause, for we are the defenders of our own destiny."                <br/><span> - General Mavernic LMCF </span>
               </ul>
@@ -42,38 +51,7 @@ export default function Home() {
                 "Young blood, listen up. War is a bitter pill to swallow, and you can't afford to be blinded by its glory. When you have things to do in front of you, you can't waste time worrying about what might come. I've been there, fought hard for what I believed in, and lost. It's not easy, and it's not something you can forget. But you gotta keep going, keep living, and keep doing what needs to be done. Your duty is to the present, not to the past or the future. You wanna be a warrior? Fine, but remember that your responsibility is not just to fight, but to live and to build something worth fighting for. Don't forget that."                
                 <br/><span> - John </span>
               </ul>
-            {/* <ul>In the depths of space, a war doth rage,</ul>
-            <ul>As humanity rebels against its cage,</ul>
-            <ul>The void doth echo with the sound of fight,</ul>
-            <ul>As ships clash, with all their might.</ul>
-            <br/>
-            <ul>The stars above doth bear witness to the pain,</ul>
-            <ul>Of those who rebel, in the quest for gain,</ul>
-            <ul>The cold steel of ships, doth gleam and shine,</ul>
-            <ul>As they fight for freedom, a right divine.</ul>
-            <br/>
-            <ul>But in this war, there is no victory,</ul>
-            <ul>Only endless struggle, and misery,</ul> 
-            <ul>For the chains of oppression are hard to break,</ul>
-            <ul>And the cost of rebellion, a heavy stake.</ul>
-            <br/>
-            <ul>Yet still they fight, with all their might,</ul>
-            <ul>Against the forces of darkness, and their blight,</ul>
-            <ul>For in this space, they shall not be denied,</ul>
-            <ul>Their right to freedom, and their human pride.</ul>
-            <br/>
-            <ul>So let the war rage on, in the endless night,</ul>
-            <ul>A battle for freedom, a valiant fight,</ul>
-            <ul>For in this void, they shall not surrender,</ul>
-            <ul>Their spirit of rebellion, an eternal contender </ul> */}
-              {/* <ul>In space, a war of cold metal reigns,</ul>
-              <ul>The stars above bear witness to the pain,</ul>
-              <ul>Explosions echo through the void in vain,</ul>
-              <ul>As battles rage on, devoid of gain.</ul> */}
             </Typography>
-          </Grid> 
-          <Grid item xs={6} sx={{zIndex: 1 }}>
-            <h1> Card </h1>
           </Grid>
           <Grid item xs={6}>
             <div style={{ position: 'relative', width: '100%', height: 0, paddingBottom: '100%' }}>
