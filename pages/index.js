@@ -44,7 +44,7 @@ export default function Home() {
               </ul>
               <br/><br/>
               <ul>
-                "The Liberty Mining Colony rebels have been a regrettable consequence of our investment in their society. We provided the resources and support necessary for their growth, yet they failed to meet their obligations to the Earth Federation. This left us with no choice but to take action to protect our interests and maintain the delicate balance of power in the solar system. The rebels must understand that their actions have consequences, and we will not hesitate to use our military might to uphold our authority."                <br/><span> - General Holton EFSF </span>
+                "The Liberty Mining Colony has failed to fulfill their obligations to the Earth Federation despite our investment in their society. To maintain the balance of power in the solar system and protect our interests, we have taken action. It is important for all parties to understand the consequences of their actions, and we remain committed to upholding our authority with the resources at our disposal."                <br/><span> - General Holton EFSF </span>
               </ul>
               <br/><br/>
               <ul>
