@@ -1,9 +1,8 @@
-import { Box, styled, keyframes, Card, CardContent, Typography, Grid } from '@mui/material'
-import StarIcon from '@mui/icons-material/Star';
+import { Card, CardContent, Typography, Grid } from '@mui/material'
 import Head from 'next/head'
 import Image from 'next/image'
 import Mech from '../public/gruntz_mech.jpg'
-import Cover from '../public/cover2.jpg'
+import Cover from '../public/Cover2.png'
 
 
 export default function Home() {
@@ -29,18 +28,50 @@ export default function Home() {
               />
             </div>
           </Grid>
-          <Grid item xs={6} container justifyContent="center" alignItems="center" sx={{zIndex: 1 }}>
-              <Card sx={{ maxWidth: 345, width: 500, height: 500 }}>
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    My Title
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Some description text goes here.
-                  </Typography>
-                </CardContent>
-              </Card>
-          </Grid>
+          <Grid item xs={6} container justifyContent="center" alignItems="center" sx={{ zIndex: 1, p: 5 }}>
+            <Typography variant="h5" align="center">
+              <ul>
+                "The fight between us and the Earth Federation is not just about resources, but about our right to live free and with dignity. We will not let them control us and oppress our people. This is a battle for our independence and the future of our colony. We will stand firm and fight for our cause, for we are the defenders of our own destiny."                <br/><span> - General Mavernic LMCF </span>
+              </ul>
+              <br/><br/>
+              <ul>
+                "The Liberty Mining Colony rebels have been a regrettable consequence of our investment in their society. We provided the resources and support necessary for their growth, yet they failed to meet their obligations to the Earth Federation. This left us with no choice but to take action to protect our interests and maintain the delicate balance of power in the solar system. The rebels must understand that their actions have consequences, and we will not hesitate to use our military might to uphold our authority."                <br/><span> - General Holton EFSF </span>
+              </ul>
+              <br/><br/>
+              <ul>
+                "Young blood, listen up. War is a bitter pill to swallow, and you can't afford to be blinded by its glory. When you have things to do in front of you, you can't waste time worrying about what might come. I've been there, fought hard for what I believed in, and lost. It's not easy, and it's not something you can forget. But you gotta keep going, keep living, and keep doing what needs to be done. Your duty is to the present, not to the past or the future. You wanna be a warrior? Fine, but remember that your responsibility is not just to fight, but to live and to build something worth fighting for. Don't forget that."                
+                <br/><span> - John </span>
+              </ul>
+            {/* <ul>In the depths of space, a war doth rage,</ul>
+            <ul>As humanity rebels against its cage,</ul>
+            <ul>The void doth echo with the sound of fight,</ul>
+            <ul>As ships clash, with all their might.</ul>
+            <br/>
+            <ul>The stars above doth bear witness to the pain,</ul>
+            <ul>Of those who rebel, in the quest for gain,</ul>
+            <ul>The cold steel of ships, doth gleam and shine,</ul>
+            <ul>As they fight for freedom, a right divine.</ul>
+            <br/>
+            <ul>But in this war, there is no victory,</ul>
+            <ul>Only endless struggle, and misery,</ul> 
+            <ul>For the chains of oppression are hard to break,</ul>
+            <ul>And the cost of rebellion, a heavy stake.</ul>
+            <br/>
+            <ul>Yet still they fight, with all their might,</ul>
+            <ul>Against the forces of darkness, and their blight,</ul>
+            <ul>For in this space, they shall not be denied,</ul>
+            <ul>Their right to freedom, and their human pride.</ul>
+            <br/>
+            <ul>So let the war rage on, in the endless night,</ul>
+            <ul>A battle for freedom, a valiant fight,</ul>
+            <ul>For in this void, they shall not surrender,</ul>
+            <ul>Their spirit of rebellion, an eternal contender </ul> */}
+              {/* <ul>In space, a war of cold metal reigns,</ul>
+              <ul>The stars above bear witness to the pain,</ul>
+              <ul>Explosions echo through the void in vain,</ul>
+              <ul>As battles rage on, devoid of gain.</ul> */}
+            </Typography>
+          </Grid> 
           <Grid item xs={6} sx={{zIndex: 1 }}>
             <h1> Card </h1>
           </Grid>
