@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Card, CardContent, Typography, Grid } from '@mui/material'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -34,7 +35,7 @@ export default function Home() {
                 <p>It is a tale of humanity in all of its glory, compassion, and horror. Told from the perspective of both sides of the conflict, the lines between wright and wrong, truth and lies, and the very notion of "Enemy" become blurred.</p><br/>
                 <p>It has been over 300 years since Earth Globalized and began its venture into space. However the further Huanity expanded the less cohesive our unity bacame. In an attempt to keep order the Earth Federation maintained a monopoly on food and in response the colonies it established outside the earth sphere would provide raw reasourses long gone from our homeworld.</p><br/>
                 <p>One such colony is Gama 3, self proclaimed as Liberty Mining Colony, was a penal colony established by pulling an astroid out of orbit. It was Earths largest supplier of raw and rare minerals until strong solar winds dampened collection. After countless missed quotas the Earth Federation began limiting thier shipments of food to Liberty. As many colonists where origionally conscripts from a failed Mars rebellion, Liberty declared independance and ceased all shipments to Earth.</p><br/>
-                <p>One year has passed since Liberty Mining Colony went on strike. The Federation have sent 3 state of the art battle ships to reclaim thier assets. In preperation the the Liberty Colonists begin improvising arms and armaments to fortifying thier home to impeding invasion.</p>
+                <p>One year has passed since Liberty Mining Colony went on strike. The Federation have sent 3 state of the art battle ships to reclaim thier assets. In preperation the the Liberty Colonists begin improvising arms and armaments to fortifying thier home to impeding invasion. </p>
             </Typography>
           </Grid> 
           <Grid item xs={6} container justifyContent="center" alignItems="center" sx={{ zIndex: 1, p: 5 }}>
