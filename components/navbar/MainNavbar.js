@@ -1,4 +1,5 @@
-import { AppBar, Box, Button, Container, Grid, Toolbar, Typography } from "@mui/material"
+import { AppBar, Button, Container, Grid, Toolbar, Typography } from "@mui/material"
+import { FormattedMessage } from "react-intl"
 
 const MainNavbar = ({
 
@@ -20,14 +21,14 @@ const MainNavbar = ({
                                 component="a"
                                 href="/"
                             >
-                                Iron Hearts
+                                <FormattedMessage id="title"/>
                             </Typography>
                         </Grid>
                         <Grid item>
-                            <Button color="inherit" size="large"> About </Button>
-                            <Button color="inherit" size="large"> Store </Button>
-                            <Button color="inherit" size="large"> News </Button>
-                            <Button color="inherit" size="large"> Login </Button>
+                            <Button color="inherit" size="large"> <FormattedMessage id="about"/> </Button>
+                            <Button color="inherit" size="large"> <FormattedMessage id="store"/> </Button>
+                            <Button color="inherit" size="large"> <FormattedMessage id="news"/> </Button>
+                            <Button color="inherit" size="large"> <FormattedMessage id="login"/> </Button>
                         </Grid>
                     </Grid>                    
                 </Toolbar>
