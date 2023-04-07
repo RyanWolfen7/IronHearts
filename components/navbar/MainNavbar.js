@@ -10,7 +10,8 @@ const MainNavbar = ({
 }) => {
     const Route = useRouter()
     const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down("sm"));
-    const buttonSize = isSmallScreen ? 'small' : "xlarge"
+    const buttonSize = isSmallScreen ? 'small' : "xlarge";
+    const loggedIn = false
 
     return (
         <AppBar position="sticky">
@@ -34,13 +35,14 @@ const MainNavbar = ({
                                 </div>
                             </Box>
                         </Grid>
-                        <Grid item >
+                        <Grid item xs={12} md={5} justifyContent="center" container>
                             <Button color="inherit" size={buttonSize} onClick={() => Route.push('/about')}> <FormattedMessage id="about"/> </Button>
                             <Button color="inherit" size={buttonSize} onClick={() => Route.push('/lore')}> <FormattedMessage id="lore"/> </Button>
-                            <Button color="inherit" size={buttonSize} onClick={() => Route.push('/store')}> <FormattedMessage id="store"/> </Button>
                             <Button color="inherit" size={buttonSize} onClick={() => Route.push('/news')}> <FormattedMessage id="news"/> </Button>
+                            <Button color="inherit" size={buttonSize} onClick={() => Route.push('/roadmap')}> <FormattedMessage id="roadmap"/> </Button>
+                            <Button color="inherit" size={buttonSize} onClick={() => Route.push('/store')}> <FormattedMessage id="store"/> </Button>
                             <Button color="inherit" size={buttonSize} onClick={() => Route.push('/support')}> <FormattedMessage id="support"/> </Button>
-                            { !isSmallScreen && <Button color="inherit" size={buttonSize} onClick={() => Route.push('/login')}> <FormattedMessage id="login"/> </Button>}
+                            <Button color="inherit" size={buttonSize} onClick={() => Route.push('/login')}> <FormattedMessage id={"join"}/> </Button>
                         </Grid>
                     </Grid>                    
                 </Toolbar>
