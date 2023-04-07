@@ -1,5 +1,6 @@
 {
     "title": "Iron Hearts",
+    "join": "Join",
 
     "NAV_BUTTONS": "VVVVVVVVVVVV",
     "about": "About",
@@ -20,11 +21,21 @@
 
     "ABOUT_PAGE": "VVVVVVVVVVVV",
     "ourStory": "Our Story",
-    "aboutIntro": "Welcome to IronHearts, a heart wrenching “space opera/real robot” graphic novel series that follows the everyday life of  soldiers caught in violent conflict between the globalized Earth Federation and the downtrodden Liberty Mining Colony rebels. Our story blends action, mecha, slice of life, and politics to weave a tale of interconnected and deeply nuanced character stories. The story is told from both sides of the conflict and takes inspiration from real world combat experiences, to deliver a more true to life story.  This story isn’t anti or pro war… it’s Human.",
-    "aboutIntro2": "I was inspired to create this from growing up with Mobile Suit Gundam 0079 and my years in the Army.  While I loved many aspects of MSG, the story always seemed fantastical and only seemed to scratch the surface of what a story like that is capable of. I wanted to create a series that would resonate with readers on a deep level and truly bring out some of these themes and concepts to the fullest level. You can expect to have it all in this story. The first Arch is a standalone novel that sets up the rest of the series. You will go from meaningful moments with characters, to suspenseful high stakes strategic/political struggles, to high octane action conflicts, and capped with the heartbreaking realities of our stories characters. Iron Hearts is a story like no other and We hope that you join us in trying to bring this story to life.",
-    "about2": "",
-    "about3": "",
-    "about4": "",
-    "about5": "",
-    "about6": ""
+    "ourStory2": "Welcome to IronHearts, a heart wrenching “space opera/real robot” graphic novel series that follows the everyday life of  soldiers caught in violent conflict between the globalized Earth Federation and the downtrodden Liberty Mining Colony rebels. Our story blends action, mecha, slice of life, and politics to weave a tale of interconnected and deeply nuanced character stories. The story is told from both sides of the conflict and takes inspiration from real world combat experiences, to deliver a more true to life story.  This story isn’t anti or pro war… it’s Human.",
+    "ourStory3": "Gruntz was inspired to create this from growing up with Mobile Suit Gundam 0079 and his years in the Army.  While he loved many aspects of MSG, the story always seemed fantastical and only seemed to scratch the surface of what a story like that is capable of. He wanted to create a series that would resonate with readers on a deep level and truly bring out some of these themes and concepts to the fullest level. You can expect to have it all in this story. The first Arch is a standalone novel that sets up the rest of the series. You will go from meaningful moments with characters, to suspenseful high stakes strategic/political struggles, to high octane action conflicts, and capped with the heartbreaking realities of our stories characters. Iron Hearts is a story like no other and We hope that you join us in trying to bring this story to life.",
+    "ourStory4": "Mobile Suit Gundam and Star Wars were cultural phenomena that were much more than ordinary stories. We want that for Iron Hearts because this project is more than just a story, it's an opportunity to build community and inspire a new generation. We want to provide a full experience that far exceeds a simple story. Step by step, we’ll make games, animated series, merchandise, and earn your love and support. It all starts with setting up infastructure like this website and ends with a journey we all get to share together.",
+    "ourTeam": "Our Team",
+    "writer": "Writer/Creator",
+    "gruntz": "Grunts was an Army brat that would later enlist himself. He was an 11B Infantryman with specializations in Jungle Warfare. When he left the military, he spent 5 years vagabonding across the world. He has come from all walks of life and is happy enough to part his experiences with anyone who cares to ponder. Now he is settled with a family and enjoys a quiet life at his cubicle, but the passion of his creative heart yearns for adventure. ",
+    "gruntz2": "Grunts spent 8 years crafting Iron Hearts. Originally it was going to be in a novel, but he felt that the medium wasn’t rich enough for the story. Despite growing up with classic anime (Gundam, Ghost In The Shell, and Cowboy Bebop) and a few comics (Captain America, Punisher, and Turok) he didn’t know much about the medium. After experimenting with webtoons and learning/consuming as much information as he could he began planning to rework Iron Hearts as a graphic novel. Luck would have it him running into Chi who could cover all the gaps in Gruntz’s game.",
+    "artist": "Artist",
+    "chi": "",
+    "chi2": "As the team's artist, Chi brings new life into the Iron Hearts story. He helps consolidate and conceptualize the written story to make it more appealing graphically, thematically, and tonally. Chi bumps up the story with excellent attention to detail and creative solutions for fleshing out the greater world of the story… but the most and best part of all of Chi’s contributions… he makes things 100x cooler than when they were brought to him.",
+    "producer": "Producer",
+    "liv": "Liv is a seasoned Army veteran from the Gulf War. Tough as nails, resourceful, and kind Liv is a true renaissance woman that brings her vast wealth of experience to the Iron Hearts Team",
+    "liv2": "We're all still unsure what a producer does, but she does it well and somehow we always manage to get the things we need.",
+    "family": "Family",
+    "you": "!!! YOU !!!",
+    "you2": "We can't do this without support! A story is only as good as its fans and would be fans. We'd love for you to join or send some love our way."
+
 }
