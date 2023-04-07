@@ -11,7 +11,7 @@ const MainNavbar = ({
     const Route = useRouter()
     const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down("sm"));
     const buttonSize = isSmallScreen ? 'small' : "xlarge"
-    console.log(buttonSize)
+
     return (
         <AppBar position="sticky">
             <Container maxWidth="xl">
@@ -23,7 +23,7 @@ const MainNavbar = ({
                     >
                         <Grid item  xs={12} sm={6}>
                             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                                <div className={styles.logoWrapper}>
+                                <div className={styles.logoWrapper} onClick={() => Route.push('/')}>
                                     <Image 
                                         src={Logo}
                                         alt="Iron Hearts"
@@ -36,6 +36,7 @@ const MainNavbar = ({
                         </Grid>
                         <Grid item >
                             <Button color="inherit" size={buttonSize} onClick={() => Route.push('/about')}> <FormattedMessage id="about"/> </Button>
+                            <Button color="inherit" size={buttonSize} onClick={() => Route.push('/lore')}> <FormattedMessage id="lore"/> </Button>
                             <Button color="inherit" size={buttonSize} onClick={() => Route.push('/store')}> <FormattedMessage id="store"/> </Button>
                             <Button color="inherit" size={buttonSize} onClick={() => Route.push('/news')}> <FormattedMessage id="news"/> </Button>
                             <Button color="inherit" size={buttonSize} onClick={() => Route.push('/support')}> <FormattedMessage id="support"/> </Button>

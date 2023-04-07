@@ -3,6 +3,7 @@
     width: 25vw !important;
     height: 7rem !important;
     margin: 5 !important;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 600px) {
