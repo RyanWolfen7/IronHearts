@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useMediaQuery, Typography, Grid } from '@mui/material'
 import Head from 'next/head'
-import Image from "next/legacy/image"
+import Image from "next/image"
 import Mech from '../public/gruntz_mech.jpg'
 import Cover from '../public/Cover2.png'
 import { FormattedMessage } from 'react-intl'
@@ -27,7 +27,6 @@ export default function Home() {
                 alt="IH-Cover"
                 fill
                 object-fit="cover"
-                objectPosition="center"
               />
             </div>
           </Grid>
