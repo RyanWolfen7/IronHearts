@@ -35,8 +35,8 @@ export default function Home() {
             <Typography variant={headerSize} align="center">
                 <p><FormattedMessage id="landingPitch1"/></p><br/>
                 <p><FormattedMessage id="landingPitch2"/></p><br/>
-                {/* <p>Gama 3 was a penal colony for conscripted Mars rebels that mined essential raw minerals. After 20 years, the conscripts were freed, but the colony's productivity declined due to strong solar winds. The Earth Federation responded by limiting food shipments, increasing tensions. With many former rebels among them, the colony renamed itself to Liberty, declared independence and stopped all shipments. Now, the Federation is sending battleships to reclaim their assets, and Liberty is preparing to defend themselves.</p><br/> */}
-                <p><FormattedMessage id="landingPitch3"/></p><br/>
+                <p><FormattedMessage id="landingPitch3Alt"/></p><br/>
+                {/* <p><FormattedMessage id="landingPitch3"/></p><br/> */}
             </Typography>
           </Grid> 
           <Grid item xs={12} md={6} container justifyContent="center" alignItems="center" sx={{ zIndex: 1, p: 5 }}>
