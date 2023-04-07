@@ -1,7 +1,7 @@
 import { AppBar, Button, Container, Grid, Toolbar, Box, useMediaQuery } from "@mui/material"
 import { useRouter } from "next/router"
 import { FormattedMessage } from "react-intl"
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import Logo from '../../public/logo2.png'
 import styles from '../../styles/navbar.module.css'
 
