@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useMediaQuery, Typography, Grid } from '@mui/material'
+import { useMediaQuery, Typography, Grid, Button } from '@mui/material'
 import Head from 'next/head'
 import Image from "next/image"
 import Mech from '../public/gruntz_mech.jpg'
@@ -38,6 +38,20 @@ export default function Home() {
                 {/* <p><FormattedMessage id="landingPitch3"/></p><br/> */}
             </Typography>
           </Grid> 
+          <Grid xs={12} container justifyContent="center" textAlign="center" sx={{ zIndex: 1, p: 5 }} gap={5}>
+                        <Grid item xs={6} md={4} justifyContent="center" container gap={2}>
+                          <Typography variant={headerSize}>  <FormattedMessage id="enlist"/>  </Typography>
+                            <Button color="secondary" variant="contained" size="large">
+                                <FormattedMessage id="join"/>
+                            </Button>
+                        </Grid>
+                        <Grid item xs={6} md={4} justifyContent="center" container gap={2}>
+                            <Typography variant={headerSize}>  <FormattedMessage id="donate"/> </Typography>
+                            <Button color="secondary" variant="contained" size="large">
+                                <FormattedMessage id="support"/>
+                            </Button>
+                        </Grid>
+          </Grid>
           <Grid item xs={12} md={6} container justifyContent="center" alignItems="center" sx={{ zIndex: 1, p: 5 }}>
             <Typography variant={headerSize} align="center">
               <ul>
