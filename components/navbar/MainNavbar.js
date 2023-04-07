@@ -37,12 +37,15 @@ const MainNavbar = ({
                         </Grid>
                         <Grid item xs={12} md={5} justifyContent="center" container>
                             <Button color="inherit" size={buttonSize} onClick={() => Route.push('/about')}> <FormattedMessage id="about"/> </Button>
-                            <Button color="inherit" size={buttonSize} onClick={() => Route.push('/lore')}> <FormattedMessage id="lore"/> </Button>
-                            <Button color="inherit" size={buttonSize} onClick={() => Route.push('/news')}> <FormattedMessage id="news"/> </Button>
-                            <Button color="inherit" size={buttonSize} onClick={() => Route.push('/roadmap')}> <FormattedMessage id="roadmap"/> </Button>
+                            {loggedIn && <>
+                                <Button color="inherit" size={buttonSize} onClick={() => Route.push('/lore')}> <FormattedMessage id="lore"/> </Button>
+                                <Button color="inherit" size={buttonSize} onClick={() => Route.push('/news')}> <FormattedMessage id="news"/> </Button>
+                                <Button color="inherit" size={buttonSize} onClick={() => Route.push('/roadmap')}> <FormattedMessage id="roadmap"/> </Button>
+                            </>}
                             <Button color="inherit" size={buttonSize} onClick={() => Route.push('/store')}> <FormattedMessage id="store"/> </Button>
                             <Button color="inherit" size={buttonSize} onClick={() => Route.push('/support')}> <FormattedMessage id="support"/> </Button>
-                            <Button color="inherit" size={buttonSize} onClick={() => Route.push('/login')}> <FormattedMessage id={"join"}/> </Button>
+                            {!loggedIn && <Button color="inherit" size={buttonSize} onClick={() => Route.push('/login')}> <FormattedMessage id={"join"}/> </Button>}
+                            {loggedIn && <Button color="inherit" size={buttonSize} onClick={() => Route.push('/dashboard')}> <FormattedMessage id={"dashboard"}/> </Button>}
                         </Grid>
                     </Grid>                    
                 </Toolbar>
