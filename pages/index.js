@@ -42,7 +42,7 @@ export default function Home() {
           <Grid item xs={12} md={6} container justifyContent="center" alignItems="center" sx={{ zIndex: 1, p: 5 }}>
             <Typography variant={headerSize} align="center">
               <ul>
-              <FormattedMessage id="mavQuote"/> <br/><span> - General Mavernic LMCF </span>
+                <FormattedMessage id="mavQuote"/> <br/><span> - General Mavernic LMCF </span>
               </ul>
               <br/><br/>
               <ul>
