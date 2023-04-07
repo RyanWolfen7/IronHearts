@@ -34,7 +34,7 @@ const About = ({
                         <FormattedMessage id="ourTeam"/>
                     </Typography>
                 </Grid>
-                <Grid item xs={4} sx={{ zIndex: 1 }}>
+                <Grid item xs={12} sm={4}  sx={{ zIndex: 1 }}>
                     <Typography variant="h6">
                         <FormattedMessage id="writer"/>
                     </Typography>
@@ -42,7 +42,7 @@ const About = ({
                         Gruntz 
                     </Typography>
                 </Grid>
-                <Grid item xs={6} sx={{ zIndex: 1 }}>
+                <Grid item xs={12} sm={6}  sx={{ zIndex: 1 }}>
                     <Typography variant="body1">
                         <FormattedMessage id="gruntz"/>
                     </Typography>
@@ -54,7 +54,7 @@ const About = ({
                 <Grid item xs={12} sx={{ zIndex: 1 }}>
                     <Divider sx={{ bgcolor: 'white', my: '16px'}} />
                 </Grid>                
-                <Grid item xs={4} sx={{ zIndex: 1 }}>
+                <Grid item xs={12} sm={4}  sx={{ zIndex: 1 }}>
                     <Typography variant="h6">
                         <FormattedMessage id="artist"/>
                     </Typography>
@@ -62,7 +62,7 @@ const About = ({
                         Chiflame 
                     </Typography>
                 </Grid>
-                <Grid item xs={6} sx={{ zIndex: 1 }}>
+                <Grid item xs={12} sm={6}  sx={{ zIndex: 1 }}>
                     <Typography variant="body1">
                         <FormattedMessage id="chi"/>
                     </Typography>
@@ -74,7 +74,7 @@ const About = ({
                 <Grid item xs={12} sx={{ zIndex: 1 }}>
                     <Divider sx={{ bgcolor: 'white', my: '16px'}} />
                 </Grid>
-                <Grid item xs={4} sx={{ zIndex: 1 }}>
+                <Grid item xs={12} sm={4}  sx={{ zIndex: 1 }}>
                     <Typography variant="h6">
                         <FormattedMessage id="producer"/>
                     </Typography>
@@ -82,7 +82,7 @@ const About = ({
                         Liv_Scar 
                     </Typography>
                 </Grid>
-                <Grid item xs={6} sx={{ zIndex: 1 }}>
+                <Grid item xs={12} sm={6}  sx={{ zIndex: 1 }}>
                     <Typography variant="body1">
                         <FormattedMessage id="liv"/>
                     </Typography>
@@ -94,7 +94,7 @@ const About = ({
                 <Grid item xs={12} sx={{ zIndex: 1 }}>
                     <Divider sx={{ bgcolor: 'white', my: '16px'}} />
                 </Grid>
-                <Grid item xs={4} sx={{ zIndex: 1 }}>
+                <Grid item xs={12} sm={4}  sx={{ zIndex: 1 }}>
                     <Typography variant="h6">
                         <FormattedMessage id="family"/>
                     </Typography>
@@ -102,7 +102,7 @@ const About = ({
                         <FormattedMessage id="you"/>
                     </Typography>
                 </Grid>
-                <Grid item xs={6} sx={{ zIndex: 1 }}>
+                <Grid item xs={12} sm={6} sx={{ zIndex: 1 }}>
                     <Typography variant="body1">
                         <FormattedMessage id="you2"/>
                     </Typography>
