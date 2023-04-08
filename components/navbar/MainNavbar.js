@@ -6,29 +6,34 @@ import Logo from '../../public/logo2.png'
 import styles from '../../styles/navbar.module.css'
 import LoginModal from "./LoginModal"
 import { useState } from "react"
+import PaymentModal from "./PaymentModal"
 
 const MainNavbar = ({
 
 }) => {
     const [openLoginModal, setOpenLoginModal] = useState(false)
+    const [openPaymentModal, setOpenPaymentModal] = useState(false)
+
     const Route = useRouter()
     const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down("sm"));
     const buttonSize = isSmallScreen ? 'small' : "xlarge";
     const loggedIn = false
 
     const handleLoginModal = () => {setOpenLoginModal(!openLoginModal)};
+    const handlePaymentModal = () => {setOpenPaymentModal(!openPaymentModal)};
 
     return (
         <AppBar position="sticky">
             <Container maxWidth="xl">
                 <LoginModal open={openLoginModal} handleClose={handleLoginModal}/>
+                <PaymentModal open={openPaymentModal} handleClose={handlePaymentModal}/>
                 <Toolbar disableGutters>
                     <Grid 
                         container
                         alignItems="center"
                         justifyContent="space-between"
                     >
-                        <Grid item  xs={12} sm={6}>
+                        <Grid item xs={12} sm={6}>
                             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                                 <div className={styles.logoWrapper} onClick={() => Route.push('/')}>
                                     <Image 
@@ -49,7 +54,7 @@ const MainNavbar = ({
                                 <Button color="inherit" size={buttonSize} onClick={() => Route.push('/roadmap')}> <FormattedMessage id="roadmap"/> </Button>
                             </>}
                             <Button color="inherit" size={buttonSize} onClick={() => Route.push('/store')}> <FormattedMessage id="store"/> </Button>
-                            <Button color="inherit" size={buttonSize} onClick={() => null}> <FormattedMessage id="support"/> </Button>
+                            <Button color="inherit" size={buttonSize} onClick={handlePaymentModal}> <FormattedMessage id="support"/> </Button>
                             {!loggedIn && <Button color="inherit" size={buttonSize} onClick={handleLoginModal}> <FormattedMessage id={"login"}/> </Button>}
                             {loggedIn && <Button color="inherit" size={buttonSize} onClick={() => Route.push('/dashboard')}> <FormattedMessage id={"dashboard"}/> </Button>}
                         </Grid>
