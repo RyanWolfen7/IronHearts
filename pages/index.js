@@ -5,12 +5,19 @@ import Image from "next/image"
 import Mech from '../public/gruntz_mech.jpg'
 import Cover from '../public/Cover2.png'
 import { FormattedMessage } from 'react-intl'
+import { useRouter } from 'next/router'
+import { useState } from 'react'
+import PaymentModal from '@/components/navbar/PaymentModal'
 
 
 export default function Home() {
   const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.down("xl"));
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down("sm"));
+  const Route = useRouter()
   const headerSize = isLargeScreen ? "h7" : "h6"
+  const [openPaymentModal, setOpenPaymentModal] = useState(false)
+
+  const handlePaymentModal = () => {setOpenPaymentModal(!openPaymentModal)};
   return (
     <>
       <Head>
@@ -21,6 +28,7 @@ export default function Home() {
       </Head>
       <main>
         <Grid container>
+          <PaymentModal open={openPaymentModal} handleClose={handlePaymentModal}/>
           <Grid item xs={12} md={6}>
             <div style={{ position: 'relative', width: '100%', height: 0, paddingBottom: '100%' }}>
               <Image 
@@ -45,7 +53,7 @@ export default function Home() {
           <Grid xs={12} container justifyContent="center" textAlign="center" sx={{ zIndex: 1, p: 5 }} gap={5}>
                         <Grid item xs={12} md={4} justifyContent="center" container gap={2}>
                           <Typography variant={headerSize}>  <FormattedMessage id="enlist"/>  </Typography>
-                            <Button color="secondary" variant="contained" size="large">
+                            <Button color="secondary" variant="contained" size="large" onClick={() => Route.push('/join')}>
                                 <FormattedMessage id="join"/>
                             </Button>
                         </Grid>
@@ -54,7 +62,7 @@ export default function Home() {
                         </Grid>}
                         <Grid item xs={12} md={4} justifyContent="center" container gap={2}>
                             <Typography variant={headerSize}>  <FormattedMessage id="donate"/> </Typography>
-                            <Button color="secondary" variant="contained" size="large">
+                            <Button color="secondary" variant="contained" size="large" onClick={handlePaymentModal}>
                                 <FormattedMessage id="support"/>
                             </Button>
                         </Grid>

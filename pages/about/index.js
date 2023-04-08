@@ -1,12 +1,21 @@
 import { FormattedMessage } from "react-intl"
 import { Box, Button, Container, Divider, Grid, Typography } from "@mui/material"
+import PaymentModal from "@/components/navbar/PaymentModal"
+import LoginModal from "@/components/navbar/LoginModal"
+import { useRouter } from "next/router"
+import { useState } from "react"
 
 const About = ({
 
 }) => {
+    const Route = useRouter()
+    const [openPaymentModal, setOpenPaymentModal] = useState(false)
+
+    const handlePaymentModal = () => {setOpenPaymentModal(!openPaymentModal)};
 
     return (
         <Container fixed  >
+            <PaymentModal open={openPaymentModal} handleClose={handlePaymentModal}/>
             <Grid container textAlign="center" justifyContent="center" sx={{ zIndex: 1, pb: 15 }} gap={5}>
                 <Grid item sx={{ zIndex: 1 }} >
                     <Typography variant="h2"  placeItems="center">
@@ -109,12 +118,12 @@ const About = ({
                     <br/>
                     <Grid container gap={2} justifyContent="center">
                         <Grid item xs={3}>
-                            <Button color="secondary" variant="contained">
+                            <Button color="secondary" variant="contained" onClick={() => Route.push('/join')}>
                                 <FormattedMessage id="join"/>
                             </Button>
                         </Grid>
                         <Grid item xs={3}>
-                            <Button color="secondary" variant="contained">
+                            <Button color="secondary" variant="contained" onClick={handlePaymentModal}>
                                 <FormattedMessage id="support"/>
                             </Button>
                         </Grid>
