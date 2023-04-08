@@ -1,10 +1,10 @@
-import { Box, Button, Card, CardContent, Grid, Modal, TextField, Typography } from "@mui/material";
+import { Box, Button, Card, CardContent, Grid, Modal, TextField, Typography, useMediaQuery } from "@mui/material";
 import { useRef } from "react";
 
 
 const PaymentModal = ({ open, handleClose }) => {
     const modalRef = useRef();
-    console.log(open)
+    const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down("sm"));
 
     const handleOutsideClick = (event) => {
         if (modalRef.current && !modalRef.current.contains(event.target.closest('.MuiCard-root'))) {
@@ -28,7 +28,7 @@ const PaymentModal = ({ open, handleClose }) => {
     return (
         <Modal open={open} onClose={handleClose} ref={modalRef} onClick={handleOutsideClick}>
             <Grid container placeContent="center">
-                <Grid item width="100%" height="100%" margin="10% 25%">
+                <Grid item width="100%" height="100%" margin={isSmallScreen ? '10% 0' : "10% 25%"}>
                     <Card>
                         <CardContent sx={{ pt: 5 }}>
                             <Typography

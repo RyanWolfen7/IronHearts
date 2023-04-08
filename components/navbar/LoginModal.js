@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Box, Button, Card, CardContent, Grid, Modal, TextField, Typography } from "@mui/material";
+import { Box, Button, Card, CardContent, Grid, Modal, TextField, Typography, useMediaQuery } from "@mui/material";
 import { useRef, useState } from "react";
 
 const textFieldStyles = {
@@ -24,6 +24,7 @@ const textFieldStyles = {
 const LoginModal = ({ open, handleClose }) => {
     const [login, setLogin] = useState({ email: "", password: "" });
     const modalRef = useRef();
+    const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down("sm"));
 
     const onChange = (event) => {
         const updatedInput = { [event.target.id]: event.target.value };
@@ -44,7 +45,7 @@ const LoginModal = ({ open, handleClose }) => {
     return (
         <Modal open={open} onClose={handleClose} ref={modalRef} onClick={handleOutsideClick}>
             <Grid container placeContent="center">
-                <Grid item width="100%" height="100%" margin="10% 25%">
+                <Grid item width="100%" height="100%" margin={isSmallScreen ? '10% 0' : "10% 25%"}>
                     <Card>
                         <CardContent sx={{ p: 5 }}>
                             <Typography
