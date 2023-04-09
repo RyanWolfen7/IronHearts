@@ -19,6 +19,7 @@ const PaymentModal = ({ open, handleClose }) => {
 
     const handlePaypalClick = () => {
         console.log("Pay with PayPal");
+        window.location.href = 'https://www.paypal.com/donate/?hosted_button_id=YY5HDGQU52UW8'
     };
 
     const handleVenmoClick = () => {
