@@ -85,26 +85,6 @@ const About = ({
                 </Grid>
                 <Grid item xs={12} sm={4}  sx={{ zIndex: 1 }}>
                     <Typography variant="h6">
-                        <FormattedMessage id="producer"/>
-                    </Typography>
-                    <Typography variant="body1">
-                        Liv_Scar 
-                    </Typography>
-                </Grid>
-                <Grid item xs={12} sm={6}  sx={{ zIndex: 1 }}>
-                    <Typography variant="body1">
-                        <FormattedMessage id="liv"/>
-                    </Typography>
-                    <br/>
-                    <Typography variant="body1">
-                        <FormattedMessage id="liv2"/>
-                    </Typography>
-                </Grid>
-                <Grid item xs={12} sx={{ zIndex: 1 }}>
-                    <Divider sx={{ bgcolor: 'white', my: '16px'}} />
-                </Grid>
-                <Grid item xs={12} sm={4}  sx={{ zIndex: 1 }}>
-                    <Typography variant="h6">
                         <FormattedMessage id="family"/>
                     </Typography>
                     <Typography variant="body1">
