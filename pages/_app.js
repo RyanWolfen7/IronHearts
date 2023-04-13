@@ -5,6 +5,7 @@ import createEmotionCache from '../util/createEmotionCache';
 import mainTheme from '../styles/theme/mainTheme';
 import MainNavbar from '@/components/navbar/MainNavbar';
 import { useRouter } from 'next/router';
+import { Analytics } from '@vercel/analytics/react';
 import { IntlProvider } from 'react-intl';
 import English from '../locales/en.json';
 import Spanish from '../locales/es.json';
@@ -31,6 +32,7 @@ const MyApp = ({ Component, emotionCache = clientSideEmotionCache, pageProps }) 
           <MainNavbar />
             <SpaceBackground  style={{ zIndex: -1 }} />
             <Component {...pageProps} />
+            <Analytics />
         </ThemeProvider>
       </IntlProvider>
     </CacheProvider>
