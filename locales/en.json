@@ -1,6 +1,7 @@
 {
     "title": "Iron Hearts",
     "join": "Join",
+    "joining": "Joining this site!",
     "enlist": "ENLIST TODAY TO GET ACCESS TO ADDITIONAL STORY DETAILS, UPDATES, AND EXCLUSIVE FREE CONTENT",
     "donate": "HELP US OUT BY DONATING TODAY! ALL PROCEEDS ALLOW US TO RELEASE FASTER AND ADD MORE FEATURES",
 
@@ -40,6 +41,11 @@
     "liv2": "We're all still unsure what a producer does, but she does it well and somehow we always manage to get the things we need.",
     "family": "Family",
     "you": "!!! YOU !!!",
-    "you2": "We can't do this without support! A story is only as good as its fans and would be fans. We'd love for you to join or send some love our way."
+    "you2": "We can't do this without support! A story is only as good as its fans and would be fans. We'd love for you to join or send some love our way.",
 
+    "CANCEL_PAGE": "VVVVVVVVVVVVVVVVVVVVVVVV",
+    "cancelHeader": "Thank you for your interest in Iron Hearts",
+    "cancelBody1": "We really appriciate the intrest of your support. It means alot to us that you'd be willing to help us out monitarily and we understand if you you are unable to currently. Listen, good art ain't about the money and we still hope that you'll stick around for the journey. As far as we are concerned any one cheering for us is Family! As long as we got your love and support, we'll keep trucking along.",
+    "cancelHeader2": "Don't forget there are other ways for supporting IRON HEARTS, such as:",
+    "sharing": "Spreading the word!"
 }

@@ -44,7 +44,7 @@ const LoginModal = ({ open, handleClose }) => {
 
     return (
         <Modal open={open} onClose={handleClose} ref={modalRef} onClick={handleOutsideClick}>
-            <Grid container placeContent="center">
+            <Grid container placecontent="center">
                 <Grid item width="100%" height="100%" margin={isSmallScreen ? '10% 0' : "10% 25%"}>
                     <Card>
                         <CardContent sx={{ p: 5 }}>
