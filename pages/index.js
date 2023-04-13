@@ -53,8 +53,10 @@ export default function Home() {
           <Grid xs={12} container justifyContent="center" textAlign="center" sx={{ zIndex: 1, p: 5, mb: 5 }} gap={5}>
                         <Grid item xs={12} md={5} justifyContent="center" container gap={2}>
                           <Typography variant={headerSize}>  <FormattedMessage id="enlist"/>  </Typography>
-                            <Button color="secondary" variant="contained" size="large" onClick={() => Route.push('/join')}>
-                                <FormattedMessage id="join"/>
+                            <Button color="secondary" variant="contained" sx={{ py: 1.5, px: 5, color: '#000' }} onClick={() => Route.push('/join')}>
+                                <Typography variant={headerSize} fontWeight={700}>
+                                  <FormattedMessage id="join" />
+                                </Typography>
                             </Button>
                         </Grid>
                         {isSmallScreen && <Grid item xs={12} sx={{ zIndex: 1 }}>
@@ -62,8 +64,10 @@ export default function Home() {
                         </Grid>}
                         <Grid item xs={12} md={5} justifyContent="center" container gap={2}>
                             <Typography variant={headerSize}>  <FormattedMessage id="donate"/> </Typography>
-                            <Button color="secondary" variant="contained" size="large" onClick={handlePaymentModal}>
-                                <FormattedMessage id="support"/>
+                            <Button color="secondary" variant="contained" sx={{ py: 1.5, px: 3, color: '#000' }} onClick={handlePaymentModal}>
+                                <Typography variant={headerSize} fontWeight={700}>
+                                  <FormattedMessage id="support" />
+                                </Typography>
                             </Button>
                         </Grid>
           </Grid>
