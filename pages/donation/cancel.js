@@ -50,10 +50,14 @@ const DonationCancelPage = ({
                 </Grid>
                 <Grid item xs={12} sm={3} sx={{ zIndex: 1}}>
                     <Grid container gap={5} textAlign="center"  justifyContent="center">
-                        <Typography variant="h6">
-                            <FormattedMessage id="sharing"/>
-                        </Typography>
-                        <ShareButton />
+                        <Grid item xs={12}>
+                            <Typography variant="h6">
+                                <FormattedMessage id="sharing"/>
+                            </Typography>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <ShareButton />
+                        </Grid>                        
                     </Grid>
                 </Grid>
             </Grid>
