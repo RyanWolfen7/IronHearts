@@ -61,13 +61,12 @@ const ShareButton = ({}) => {
     }
 
     return (
-        <List dense={true} sx={{ color: '#000', backgroundColor: '#ffff', borderRadius: 1}}>
-            <ListItemButton id="shareVia" onClick={() => setOpen(true)}>
-                <ListItemIcon sx={{minWidth: 'auto', mr: 1, color: '#000'}}><SendIcon/></ListItemIcon>
+        <div>
+            <Button id="share" color="secondary" variant="contained" sx={{ py: 1.5, px: 3, color: '#000' }} onClick={() => setOpen(true)} startIcon={<SendIcon/>}>
                 <Typography variant="h6" fontWeight={700}>
-                    SHARE
+                    <FormattedMessage id="share"/>
                 </Typography>
-            </ListItemButton>
+            </Button>
             <Snackbar 
                 open={snack.open}
                 autoHideDuration={3000}
@@ -115,7 +114,7 @@ const ShareButton = ({}) => {
                     </Grid>
                 </Grid>
             </Modal>
-        </List>
+        </div>
     )
 }
 
