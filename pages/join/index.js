@@ -1,5 +1,5 @@
 import { Visibility, VisibilityOff } from "@mui/icons-material";
-import { Button, Card, CardContent, Container, Divider, Fade, Grid, IconButton, InputAdornment, Slide, TextField, Typography } from "@mui/material"
+import { Box, Button, Card, Step, CardContent, Container, StepLabel, StepContent, Fade, Grid, IconButton, InputAdornment, Slide, TextField, Typography, Stepper } from "@mui/material"
 import { useState } from "react"
 import { FormattedMessage } from "react-intl"
 
@@ -29,6 +29,7 @@ const JoinPage = ({
     const [validation, setValidation] = useState({email: false, password: false})
     const [isExpedited, setIsExpedited] = useState(false)
     const [showPassword, setShowPassword] = useState(false)
+    const [openExperience, setOpenExperience] = useState(false)
     const [experienceStep, setExperienceStep] = useState(0) // starts off at 0 for false
     
     const onChange = (event) => {
@@ -50,7 +51,7 @@ const JoinPage = ({
                         <FormattedMessage id="joinHeader" />
                     </Typography>
                 </Grid>
-                <Slide direction="left" in={isExpedited} mountOnEnter>
+                <Slide direction="left" in={isExpedited} mountOnEnter unmountOnExit>
                     <Grid item sx={{ zIndex: 1, mt: 5 }} >
                         <Card>
                             <CardContent sx={{ p: 5 }}>
@@ -99,16 +100,24 @@ const JoinPage = ({
                                             <FormattedMessage id="join" />
                                         </Button>
                                     </Grid>
+                                    <Grid item width="100%">
+                                        <Box sx={{ textAlign: "center" }}>
+                                            <Typography>
+                                                Change your mind?
+                                            </Typography>
+                                            <Button color="primary" onClick={() => setIsExpedited(false)}><FormattedMessage id="return" /></Button>
+                                        </Box>
+                                    </Grid>
                                 </Grid>
                             </CardContent>
                         </Card>
                     </Grid>
                 </Slide>
-                <Fade in={(!isExpedited && experienceStep == 0)} unmountOnExit>
+                <Fade in={(!isExpedited && !openExperience)} mountOnEnter unmountOnExit>
                     <Grid item xs={12} container justifyContent="center" textAlign="center" sx={{ zIndex: 1, p: 5, mb: 5 }} gap={5}>
                         <Grid item xs={12} md={5} justifyContent="center" container gap={2}>
                             <Typography variant="body1" width="100%">  <FormattedMessage id="joinHeader2" />  </Typography>
-                            <Button color="secondary" variant="contained" sx={{ py: 1.5, px: 3, color: '#000' }}>
+                            <Button color="secondary" variant="contained" sx={{ py: 1.5, px: 3, color: '#000' }} onClick={() => setOpenExperience(true)}>
                                 <Typography variant="h6" fontWeight={700}>
                                     <FormattedMessage id="joinButton" />
                                 </Typography>
@@ -116,12 +125,36 @@ const JoinPage = ({
                         </Grid>
                         <Grid item xs={12} md={5} justifyContent="center" container gap={2}>
                             <Typography variant="body1" width="100%">  <FormattedMessage id="joinHeader3" /> </Typography>
-                            <Button color="secondary" variant="contained" sx={{ py: 1.5, px: 3, color: '#000' }} onClick={() => setIsExpedited(true)}>
+                            <Button color="secondary" variant="contained" sx={{ py: 1.5, px: 3, color: '#000' }} onClick={() => window.alert('This is still a work in progress')}>
                                 <Typography variant="h6" fontWeight={700}>
                                     <FormattedMessage id="joinButton2" />
                                 </Typography>
                             </Button>
                         </Grid>
+                    </Grid>
+                </Fade>
+                <Fade in={openExperience}  mountOnEnter unmountOnExit>
+                    <Grid item xs={12} container justifyContent="center" textAlign="center" sx={{ zIndex: 1, p: 5, mb: 5 }} gap={5}>
+                        <Stepper activeStep={experienceStep} orientation="vertical">
+                            <Step> 
+                                <StepLabel> Choose Your Faction </StepLabel>
+                                <StepContent>
+                                    One TWO
+                                </StepContent>
+                            </Step>
+                            <Step> 
+                                <StepLabel> Create Your Character </StepLabel>
+                                <StepContent>
+                                    One TWO
+                                </StepContent>
+                            </Step>
+                            <Step> 
+                                <StepLabel> Finalize  </StepLabel>
+                                <StepContent>
+                                    One TWO
+                                </StepContent>
+                            </Step>
+                        </Stepper>
                     </Grid>
                 </Fade>
             </Grid>

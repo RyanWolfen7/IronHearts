@@ -102,7 +102,7 @@ const LoginModal = ({ open, handleClose }) => {
                                             <Typography>
                                                 Don't have an account?
                                             </Typography>
-                                            <Button color="primary">Sign up</Button>
+                                            <Button color="primary" onClick={() => Route.push('/join')}>Sign up</Button>
                                         </Box>
                                     </Grid>
                                 </Grid>
