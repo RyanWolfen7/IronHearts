@@ -86,13 +86,13 @@ const JoinPage = ({
                                             error={validation.password}
                                             InputProps={{
                                                 endAdornment: (
-                                                  <InputAdornment position="end">
-                                                    <IconButton onClick={() => setShowPassword(!showPassword)}>
-                                                      {showPassword ? <Visibility /> : <VisibilityOff />}
-                                                    </IconButton>
-                                                  </InputAdornment>
+                                                    <InputAdornment position="end">
+                                                        <IconButton onClick={() => setShowPassword(!showPassword)}>
+                                                        {showPassword ? <Visibility /> : <VisibilityOff />}
+                                                        </IconButton>
+                                                    </InputAdornment>
                                                 )
-                                              }}
+                                            }}
                                         />
                                     </Grid>
                                     <Grid item width="100%">

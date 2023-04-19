@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Box, Button, Card, CardContent, Grid, Modal, TextField, Typography, useMediaQuery } from "@mui/material";
 import { useRef, useState } from "react";
+import { useRouter } from "next/router"
 
 const textFieldStyles = {
     "& .MuiOutlinedInput-root": {
@@ -24,6 +25,7 @@ const textFieldStyles = {
 const LoginModal = ({ open, handleClose }) => {
     const [login, setLogin] = useState({ email: "", password: "" });
     const modalRef = useRef();
+    const Route = useRouter()
     const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down("sm"));
 
     const onChange = (event) => {
