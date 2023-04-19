@@ -44,6 +44,11 @@ const LoginModal = ({ open, handleClose }) => {
         console.log("Submit login form");
     };
 
+    const onSignUp = () => {
+        handleClose();
+        Route.push('/join');
+    }
+
     return (
         <Modal open={open} onClose={handleClose} ref={modalRef} onClick={handleOutsideClick}>
             <Grid container placecontent="center">
@@ -104,7 +109,7 @@ const LoginModal = ({ open, handleClose }) => {
                                             <Typography>
                                                 Don't have an account?
                                             </Typography>
-                                            <Button color="primary" onClick={() => Route.push('/join')}>Sign up</Button>
+                                            <Button color="primary" onClick={onSignUp}>Sign up</Button>
                                         </Box>
                                     </Grid>
                                 </Grid>
