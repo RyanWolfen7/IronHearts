@@ -2,6 +2,11 @@
 
 const nextConfig = {
   reactStrictMode: true,
+  images: {
+    domains: [
+      'ironhearts.studio',
+    ]
+  },
   i18n: {
     locales: ['en-US', 'fr', 'de', 'es', 'ja', 'ko'],
     defaultLocale: 'en-US',
