@@ -50,7 +50,7 @@ export default function Home() {
           {isSmallScreen && <Grid item xs={12} sx={{ zIndex: 1 }}>
             <Divider sx={{ bgcolor: 'white', my: '16px'}} />
           </Grid>}
-          <Grid xs={12} container justifyContent="center" textAlign="center" sx={{ zIndex: 1, p: 5, mb: 5 }} gap={5}>
+          <Grid item xs={12} container justifyContent="center" textAlign="center" sx={{ zIndex: 1, p: 5, mb: 5 }} gap={5}>
                         <Grid item xs={12} md={5} justifyContent="center" container gap={2}>
                           <Typography variant={headerSize}>  <FormattedMessage id="enlist"/>  </Typography>
                             <Button color="secondary" variant="contained" sx={{ py: 1.5, px: 5, color: '#000' }} onClick={() => Route.push('/join')}>
@@ -97,7 +97,6 @@ export default function Home() {
                   alt="IH-Mech"
                   fill
                   object-fit="cover"
-                  objectPosition="center"
                 />
             </div>
           </Grid>
