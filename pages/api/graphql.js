@@ -12,5 +12,5 @@ const server = new ApolloServer({
 });
 
 export default startServerAndCreateNextHandler(server, {
-    context: async() => ({ db: await MongoClientPromise()})
+    context: async () => ({ mongoPromise: await MongoClientPromise()})
 });
