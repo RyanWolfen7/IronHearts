@@ -2,6 +2,7 @@ import { Visibility, VisibilityOff } from "@mui/icons-material";
 import { Box, Button, Card, Step, CardContent, Container, StepLabel, StepContent, Fade, Grid, IconButton, InputAdornment, Slide, TextField, Typography, Stepper } from "@mui/material"
 import { useState } from "react"
 import { FormattedMessage } from "react-intl"
+import Expedited from "../components/join/Expedited"
 
 const textFieldStyles = {
     "& .MuiOutlinedInput-root": {
@@ -28,7 +29,6 @@ const JoinPage = ({
     const [user, setUser] = useState({ email: '', password: '', name: '', age: '', faction: '', mos: '', bio: '' })
     const [validation, setValidation] = useState({email: false, password: false})
     const [isExpedited, setIsExpedited] = useState(false)
-    const [showPassword, setShowPassword] = useState(false)
     const [openExperience, setOpenExperience] = useState(false)
     const [experienceStep, setExperienceStep] = useState(0) // starts off at 0 for false
     
@@ -45,13 +45,13 @@ const JoinPage = ({
     }
 
     const openExpeditedHandler = () => {
-        setIsExpedited(true)
+        setIsExpedited(isExpedited)
     }
 
     const onSubmit = () => {
 
     } 
-
+    // console.log(user)
     return (
         <Container>
             <Grid container textAlign="center" justifyContent="center" sx={{ zIndex: 1, pb: 15 }} gap={5}>
@@ -61,66 +61,13 @@ const JoinPage = ({
                     </Typography>
                 </Grid>
                 <Slide direction="left" in={isExpedited} mountOnEnter unmountOnExit>
-                    <Grid item sx={{ zIndex: 1, mt: 5 }} >
-                        <Card>
-                            <CardContent sx={{ p: 5 }}>
-                                <Typography color="primary" variant="h4" textAlign="center" mb={5}>
-                                    One Step Away!
-                                </Typography>
-                                <Grid container direction="column" gap={3} color="#000" justifyContent="center" alignItems="center">
-                                    <Grid item width="100%">
-                                        <TextField
-                                            id="email"
-                                            value={user.email}
-                                            variant="outlined"
-                                            name="email"
-                                            label="Email"
-                                            helperText={validation.email ? 'Please enter a valid email address' : ''}
-                                            error={validation.email}
-                                            sx={textFieldStyles}
-                                            onChange={onChange}
-                                        />
-                                    </Grid>
-                                    <Grid item width="100%">
-                                        <TextField
-                                            id="password"
-                                            value={user.password}
-                                            variant="outlined"
-                                            name="password"
-                                            type={showPassword ? "text" : "password"}
-                                            label="Password"
-                                            helperText={validation.password ? 'Needs 1 special character, 1 capitol, 1 number, and 16 characters long' : ''}
-                                            sx={textFieldStyles}
-                                            onChange={onChange}
-                                            error={validation.password}
-                                            InputProps={{
-                                                endAdornment: (
-                                                    <InputAdornment position="end">
-                                                        <IconButton onClick={() => setShowPassword(!showPassword)}>
-                                                        {showPassword ? <Visibility /> : <VisibilityOff />}
-                                                        </IconButton>
-                                                    </InputAdornment>
-                                                )
-                                            }}
-                                        />
-                                    </Grid>
-                                    <Grid item width="100%">
-                                        <Button type="submit" variant="contained" color="primary" fullWidth onClick={onSubmit}>
-                                            <FormattedMessage id="join" />
-                                        </Button>
-                                    </Grid>
-                                    <Grid item width="100%">
-                                        <Box sx={{ textAlign: "center" }}>
-                                            <Typography>
-                                                Change your mind?
-                                            </Typography>
-                                            <Button color="primary" onClick={() => setIsExpedited(false)}><FormattedMessage id="return" /></Button>
-                                        </Box>
-                                    </Grid>
-                                </Grid>
-                            </CardContent>
-                        </Card>
-                    </Grid>
+                    <Expedited
+                        user={user}
+                        validation={validation}
+                        textFieldStyles={textFieldStyles}
+                        onChange={onChange}
+                        openExpeditedHandler={openExpeditedHandler}
+                    />
                 </Slide>
                 <Fade in={(!isExpedited && !openExperience)} mountOnEnter unmountOnExit>
                     <Grid item xs={12} container justifyContent="center" textAlign="center" sx={{ zIndex: 1, p: 5, mb: 5 }} gap={5}>

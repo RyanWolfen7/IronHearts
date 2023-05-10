@@ -12,6 +12,7 @@
     "i18n": "npm run extract:i18n && npm run compile:i18n"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.12",
     "@apollo/server": "^4.7.0",
     "@as-integrations/next": "^1.3.0",
     "@emotion/cache": "^11.10.7",
