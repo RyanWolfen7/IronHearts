@@ -7,12 +7,17 @@ const Expedited = ({
     user,
     validation,
     textFieldStyles,
+    setChoice,
     onChange,
-    openExpeditedHandler,
     onSubmit,
-    isExpedited 
 }) => {
     const [showPassword, setShowPassword] = useState(false)
+    const [isExpedited, setIsExpedited] = useState(false)
+    
+    const openExpeditedHandler = () => {
+        setIsExpedited(!isExpedited)
+        setChoice(false)
+    }
 
     return (
         <Slide direction="left" in={isExpedited} mountOnEnter unmountOnExit>
