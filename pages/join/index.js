@@ -44,7 +44,7 @@ const JoinPage = ({
     }
 
     const openExpeditedHandler = () => {
-        setIsExpedited(isExpedited)
+        setIsExpedited(!isExpedited)
     }
 
     const onSubmit = () => {
@@ -59,15 +59,15 @@ const JoinPage = ({
                         <FormattedMessage id="joinHeader" />
                     </Typography>
                 </Grid>
-                <Slide direction="left" in={isExpedited} mountOnEnter unmountOnExit>
-                    <Expedited
-                        user={user}
-                        validation={validation}
-                        textFieldStyles={textFieldStyles}
-                        onChange={onChange}
-                        openExpeditedHandler={openExpeditedHandler}
-                    />
-                </Slide>
+                <Expedited
+                    user={user}
+                    validation={validation}
+                    textFieldStyles={textFieldStyles}
+                    onChange={onChange}
+                    openExpeditedHandler={openExpeditedHandler}
+                    onSubmit={onSubmit}
+                    isExpedited={isExpedited}
+                />
                 <Fade in={(!isExpedited && !openExperience)} mountOnEnter unmountOnExit>
                     <Grid item xs={12} container justifyContent="center" textAlign="center" sx={{ zIndex: 1, p: 5, mb: 5 }} gap={5}>
                         <Grid item xs={12} md={5} justifyContent="center" container gap={2}>
