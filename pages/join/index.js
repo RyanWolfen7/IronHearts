@@ -1,8 +1,7 @@
-import { Visibility, VisibilityOff } from "@mui/icons-material";
-import { Box, Button, Card, Step, CardContent, Container, StepLabel, StepContent, Fade, Grid, IconButton, InputAdornment, Slide, TextField, Typography, Stepper } from "@mui/material"
+import Expedited from "@/components/join/Expedited";
+import { Button, Step, Container, StepLabel, StepContent, Fade, Grid,  Slide, Typography, Stepper } from "@mui/material"
 import { useState } from "react"
 import { FormattedMessage } from "react-intl"
-import Expedited from "../components/join/Expedited"
 
 const textFieldStyles = {
     "& .MuiOutlinedInput-root": {
