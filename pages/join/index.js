@@ -49,6 +49,10 @@ const JoinPage = ({
     }
 
     const onSubmit = () => {
+        if(!validation.email || !validation.password) {
+            window.alert('Please fix the above errors') // temp
+            return null
+        }
 
     } 
     // console.log(user)
