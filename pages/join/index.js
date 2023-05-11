@@ -27,7 +27,7 @@ const JoinPage = ({
 }) => {
     const [user, setUser] = useState({ email: '', password: '', name: '', age: '', faction: '', mos: '', bio: '' })
     const [validation, setValidation] = useState({email: false, password: false})
-    const [choice, setChoice] = useState(false)
+    const [isExpedited, setIsExpedited] = useState(false)
     const [openExperience, setOpenExperience] = useState(false)
     const [experienceStep, setExperienceStep] = useState(0) // starts off at 0 for false
     
@@ -41,6 +41,10 @@ const JoinPage = ({
     const openExperienceHandler = () => {
         window.alert('This is still a work in progress') // temp
         // setOpenExperience(true)
+    }
+
+    const openExpeditedHandler = () => {
+        setIsExpedited(!isExpedited)
     }
 
     const onSubmit = () => {
@@ -60,10 +64,11 @@ const JoinPage = ({
                     validation={validation}
                     textFieldStyles={textFieldStyles}
                     onChange={onChange}
+                    openExpeditedHandler={openExpeditedHandler}
                     onSubmit={onSubmit}
-                    setChoice={setChoice}
+                    isExpedited={isExpedited}
                 />
-                <Fade in={choice} mountOnEnter unmountOnExit>
+                <Fade in={(!isExpedited && !openExperience)} mountOnEnter unmountOnExit>
                     <Grid item xs={12} container justifyContent="center" textAlign="center" sx={{ zIndex: 1, p: 5, mb: 5 }} gap={5}>
                         <Grid item xs={12} md={5} justifyContent="center" container gap={2}>
                             <Typography variant="body1" width="100%">  <FormattedMessage id="joinHeader2" />  </Typography>
