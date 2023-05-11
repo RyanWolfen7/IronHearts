@@ -1,4 +1,6 @@
 import Expedited from "@/components/join/Expedited";
+import Experience from "@/components/join/Experience";
+import MainCardButtons from "@/components/join/MainCardButtons";
 import { Button, Step, Container, StepLabel, StepContent, Fade, Grid,  Slide, Typography, Stepper } from "@mui/material"
 import { useState } from "react"
 import { FormattedMessage } from "react-intl"
@@ -29,7 +31,6 @@ const JoinPage = ({
     const [validation, setValidation] = useState({email: false, password: false})
     const [isExpedited, setIsExpedited] = useState(false)
     const [openExperience, setOpenExperience] = useState(false)
-    const [experienceStep, setExperienceStep] = useState(0) // starts off at 0 for false
     
     const onChange = (event) => {
         const validationRegex = {email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, password: /^(?=.*[A-Z])(?=.*[@#$%^&+=])(?=.{16,})\S+$/}
@@ -68,50 +69,15 @@ const JoinPage = ({
                     onSubmit={onSubmit}
                     isExpedited={isExpedited}
                 />
-                <Fade in={(!isExpedited && !openExperience)} mountOnEnter unmountOnExit>
-                    <Grid item xs={12} container justifyContent="center" textAlign="center" sx={{ zIndex: 1, p: 5, mb: 5 }} gap={5}>
-                        <Grid item xs={12} md={5} justifyContent="center" container gap={2}>
-                            <Typography variant="body1" width="100%">  <FormattedMessage id="joinHeader2" />  </Typography>
-                            <Button color="secondary" variant="contained" sx={{ py: 1.5, px: 3, color: '#000' }} onClick={openExperienceHandler}>
-                                <Typography variant="h6" fontWeight={700}>
-                                    <FormattedMessage id="joinButton" />
-                                </Typography>
-                            </Button>
-                        </Grid>
-                        <Grid item xs={12} md={5} justifyContent="center" container gap={2}>
-                            <Typography variant="body1" width="100%">  <FormattedMessage id="joinHeader3" /> </Typography>
-                            <Button color="secondary" variant="contained" sx={{ py: 1.5, px: 3, color: '#000' }} onClick={openExpeditedHandler}>
-                                <Typography variant="h6" fontWeight={700}>
-                                    <FormattedMessage id="joinButton2" />
-                                </Typography>
-                            </Button>
-                        </Grid>
-                    </Grid>
-                </Fade>
-                <Fade in={openExperience}  mountOnEnter unmountOnExit>
-                    <Grid item xs={12} container justifyContent="center" textAlign="center" sx={{ zIndex: 1, p: 5, mb: 5 }} gap={5}>
-                        <Stepper activeStep={experienceStep} orientation="vertical">
-                            <Step> 
-                                <StepLabel> Choose Your Faction </StepLabel>
-                                <StepContent>
-                                    One TWO
-                                </StepContent>
-                            </Step>
-                            <Step> 
-                                <StepLabel> Create Your Character </StepLabel>
-                                <StepContent>
-                                    One TWO
-                                </StepContent>
-                            </Step>
-                            <Step> 
-                                <StepLabel> Finalize  </StepLabel>
-                                <StepContent>
-                                    One TWO
-                                </StepContent>
-                            </Step>
-                        </Stepper>
-                    </Grid>
-                </Fade>
+                <MainCardButtons 
+                    isExpedited={isExpedited}
+                    openExperience={openExperience}
+                    openExperienceHandler={openExperienceHandler}
+                    openExpeditedHandler={openExpeditedHandler}
+                />
+                <Experience 
+                    openExperience={openExperience}
+                />
             </Grid>
         </Container>
     )
