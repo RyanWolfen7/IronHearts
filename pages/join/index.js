@@ -1,7 +1,7 @@
 import Expedited from "@/components/join/Expedited";
 import Experience from "@/components/join/Experience";
 import MainCardButtons from "@/components/join/MainCardButtons";
-import { Button, Step, Container, StepLabel, StepContent, Fade, Grid,  Slide, Typography, Stepper } from "@mui/material"
+import { Container, Grid, Typography } from "@mui/material"
 import { useState } from "react"
 import { FormattedMessage } from "react-intl"
 
